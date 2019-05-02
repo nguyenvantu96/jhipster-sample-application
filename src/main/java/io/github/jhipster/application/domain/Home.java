@@ -4,23 +4,23 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "home")
+@Table(name = "home2")
 public class Home {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name= "name")
-    private String name;
+    @Column(name= "address")
+    private String address;
 
-    @Column (name ="age")
-    private Integer age;
-    public Home() {
+    @Column (name ="price")
+    private Long price;
 
+    public Home(String address) {
+        this.address = address;
     }
 
-    public Home(String name) {
-        this.name = name;
+    public Home() {
     }
 
     public Long getId() {
@@ -31,19 +31,19 @@ public class Home {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getAddress() {
+        return address;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Integer getAge() {
-        return age;
+    public Long getPrice() {
+        return price;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }
