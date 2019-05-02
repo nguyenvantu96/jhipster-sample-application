@@ -13,7 +13,10 @@ public class Home {
     @Column(name= "name")
     private String name;
 
+    @Column (name ="age")
+    private Integer age;
     public Home() {
+
     }
 
     public Home(String name) {
@@ -34,5 +37,13 @@ public class Home {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }
